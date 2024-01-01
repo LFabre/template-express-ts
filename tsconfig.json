@@ -9,8 +9,6 @@
     "emitDecoratorMetadata": true,
     "forceConsistentCasingInFileNames": true,
     "noUncheckedIndexedAccess": true,
-    "moduleResolution": "node",
-    "module": "commonjs",
     "pretty": true,
     "sourceMap": true,
     "strict": true,
@@ -21,9 +19,12 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "importHelpers": true,
-    "baseUrl": "src",
+    "baseUrl": "./src",
+    "moduleResolution": "node",
+    "module": "commonjs",
     "paths": {
-      "@/*": ["*"]
+      "@routes": ["routes"],
+      "@routes/*": ["routes/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.json", "src/**/*.d.ts", ".env"],

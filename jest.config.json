@@ -5,5 +5,9 @@
     "^.+\\.(ts|tsx)$": "ts-jest"
   },
   "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(tsx?|jsx?)$",
-  "moduleFileExtensions": ["ts", "js", "json", "node"]
+  "moduleFileExtensions": ["ts", "js", "json", "node"],
+  "moduleNameMapper": {
+    "^@routes$": "<rootDir>/src/routes/index.ts",
+    "^@routes/(.*)$": "<rootDir>/src/routes/$1"
+  }
 }

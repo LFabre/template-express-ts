@@ -1,11 +1,9 @@
-import express, {Express, Request, Response} from 'express';
+import express, {Express} from 'express';
+import helmet from 'helmet';
+import {registerRoutes} from '@routes';
 
 export const app: Express = express();
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('Express + TypeScript Template');
-});
+app.use(helmet());
 
-app.get('/ping', (req: Request, res: Response) => {
-  res.send('pong');
-});
+registerRoutes(app);

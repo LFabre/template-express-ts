@@ -9,13 +9,25 @@
     "sourceType": "module",
     "project": "test.tsconfig.json"
   },
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "import"],
   "extends": [
     "plugin:@typescript-eslint/recommended",
     "plugin:import/recommended",
     "plugin:import/typescript",
     "prettier"
   ],
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": true,
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "<root>"
+      }
+    }
+  },
   "rules": {
     "eol-last": "error",
     "semi": ["error", "always"],
