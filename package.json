@@ -9,7 +9,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon",
-    "start:dev": "ts-node -r tsconfig-paths/register --transpile-only src/server.ts"
+    "start:dev": "ts-node -r tsconfig-paths/register --transpile-only src/server.ts",
+    "lint": "eslint --ext .ts",
+    "lint:fix": "eslint --ext .ts --fix",
+    "prepare": "husky install",
+    "hooks:lint": "eslint --fix",
+    "hooks:prettier": "prettier --write"
   },
   "dependencies": {
     "dotenv": "^16.3.1",
@@ -23,6 +28,7 @@
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
+    "husky": "^8.0.3",
     "nodemon": "^3.0.2",
     "prettier": "^3.1.1",
     "ts-node": "^10.9.2",
