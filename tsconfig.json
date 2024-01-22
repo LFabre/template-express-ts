@@ -23,8 +23,18 @@
     "moduleResolution": "node",
     "module": "commonjs",
     "paths": {
+      "@config": ["config"],
+      "@controllers/*": ["controllers/*"],
+      "@errors": ["errors"],
+      "@errors/*": ["errors/*"],
+      "@middlewares": ["middlewares"],
+      "@middlewares/*": ["middlewares/*"],
       "@routes": ["routes"],
-      "@routes/*": ["routes/*"]
+      "@routes/*": ["routes/*"],
+      "@services": ["services"],
+      "@services/*": ["services/*"],
+      "@types": ["types"],
+      "@types/*": ["types/*"],
     }
   },
   "include": ["src/**/*.ts", "src/**/*.json", "src/**/*.d.ts", ".env"],
